@@ -19,8 +19,17 @@ export const GlobalProvider = ({children}) => {
     // eslint-disable-next-line
     const [state,dispatch] = useReducer(AppReducer, InitialState);
 
+    // Action lar 
+    const deleteTX = (id) => {
+        dispatch({
+            type: "DELETE_TX",
+            payload: id
+        })
+    } 
+
     return(<GloabalContext.Provider value={{
-        transactions: state.transactions
+        transactions: state.transactions,
+        deleteTX
     }}>
         {children}
     </GloabalContext.Provider>)
