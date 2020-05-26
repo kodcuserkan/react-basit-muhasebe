@@ -3,8 +3,8 @@ import { GloabalContext } from '../context/GlobalState'
 
 export const TransactionList = () => {
 
-    const { transactions, deleteTX } = useContext(GloabalContext);
-    // console.log(transactions);
+    let { transactions, deleteTX } = useContext(GloabalContext);
+    console.log(transactions);
 
     return (
         <>

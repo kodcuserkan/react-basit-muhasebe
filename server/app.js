@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const postRoute = require('./routes/posts')
+const postRoute = require('./routes/posts');
+const cors = require('cors');
 
 require('dotenv').config();
 
@@ -15,10 +16,11 @@ const app = express();
 // Middlewarelar
 
 app.use(bodyParser.json());
+app.use(cors());
 
 
 // import route as a middleware
-app.use('/posts', postRoute);
+app.use('/transfers', postRoute);
 
 // Home route
 app.get("/", (req, res) => {

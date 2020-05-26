@@ -8,7 +8,6 @@ import { AddNewTransaction } from './components/AddNewTransaction'
 import { GlobalProvider } from './context/GlobalState';
 import './App.css';
 
-
 function App() {
   return (
     <GlobalProvider>
@@ -19,6 +18,7 @@ function App() {
         <TransactionList />
         <AddNewTransaction />
       </div>
+
     </GlobalProvider>
   );
 }

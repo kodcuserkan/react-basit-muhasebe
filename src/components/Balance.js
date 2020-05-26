@@ -7,7 +7,6 @@ export const Balance = () => {
 
     const amounts = transactions.map(tx => tx.amount);
 
-    console.log(transactions)
     const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
     return (
