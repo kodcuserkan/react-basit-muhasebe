@@ -10,14 +10,11 @@ const username = process.env.MONGO_USER;
 const password = process.env.MONGO_PASSWORD;
 const url = `mongodb+srv://${username}:${password}@muhasebecluster-nta6c.mongodb.net/test?retryWrites=true&w=majority`;
 
-
-
 const app = express();
-// Middlewarelar
 
+// Middlewarelar
 app.use(bodyParser.json());
 app.use(cors());
-
 
 // import route as a middleware
 app.use('/transfers', postRoute);
