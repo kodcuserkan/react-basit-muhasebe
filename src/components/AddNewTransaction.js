@@ -12,7 +12,10 @@ export const AddNewTransaction = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-
+        if (amount === "" || amount === 0) {
+            
+            return;
+        }
         const newTX = {
             id: Math.floor(Math.random() * 1121021021201020),
             text,
@@ -20,6 +23,8 @@ export const AddNewTransaction = () => {
         }
 
         addTX(newTX);
+        setText('');
+        setAmount('');
     }
 
 
